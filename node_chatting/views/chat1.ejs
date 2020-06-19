@@ -1,0 +1,206 @@
+
+<html>
+<head>
+  <style>
+  
+   /**/
+  	#member{
+		width: 400px;;
+		height: 50px;
+		margin: auto;
+		background: #000;
+		color:#fff;
+		padding:20px 0;
+		text-align: center;
+		}
+	/* 메인 */
+	#main {
+	  margin: auto;
+	  margin-top: 100px;
+	  border-radius: 20px;
+	  background-color: lightblue;
+	  text-align: center;
+	  width: 500px;
+	  height: 600px;
+	}
+	
+	/* 채팅 영역 */
+	#chat {
+	  height: 90%;
+	  width: 100%;
+	  overflow-y: auto;
+	}
+	
+	/* 접속 알림 */
+	.connect {
+	  width: 90%;
+	  margin: auto;
+	  background-color: aquamarine;
+	  text-align: center;
+	  margin-top: 10px;
+	}
+	
+	/* 접속 종료 알림 */
+	.disconnect {
+	  width: 90%;
+	  margin: auto;
+	  background-color: indianred;
+	  text-align: center;
+	  margin-top: 10px;
+	}
+	
+	/* 내가 보낸 메시지 */
+	.me {
+	  width: 90%;
+	  margin: auto;
+	  background-color: lemonchiffon;
+	  border-radius: 5px;
+	  margin-top: 10px;
+	}
+	
+	/* 상대방이 보낸 메시지 */
+	.other {
+	  width: 90%;
+	  margin: auto;
+	  background-color: white;
+	  border-radius: 5px;
+	  margin-top: 10px;
+	}
+  </style>
+  
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+
+
+/* 해당 페이지 실행시 발생  */
+ 	$(function() {
+    
+  	
+  	// 소켓 객체 생성
+    var socket = io(); 	
+    
+    // 변수 >> 화면상단에 누구와 대화중인지 보여줄 장치 등등
+  	var myId = "<%=myId %>";
+  	var otherId = "<%=otherId %>";
+  	var myRole = "<%=myRole %>";
+  	
+  	if(myRole === "mentor"){
+  		myRole = "멘토";
+  	} else {
+  		myRole = "멘티";
+  	}
+    
+    /* 클라가 서버로 연결 되었을때 실행   >>> 서버*/ 
+    socket.on('connect', function(){
+    	console.log("클라 서버 연결");	
+    
+    	// 해당명령으로 내id, 상대id전달, 매치시퀀스
+    	socket.emit('joinRoom', {myRole: myRole, myId: "<%=myId%>", otherId: "<%=otherId%>", mathNo:"<%=mathNo%>"}); // 해당 페이지 켰을때 받아온값
+    });  
+    
+  
+	/* 방들어 왔습니다. */ 
+    socket.on('joinRoom', function(data){   // {myId : socket.myId,  myRole: socket.myRole}
+    	console.log("들어온 id :" + data.myId + " : " + "들어온 Role : "+ data.myRole)	
+    	     	
+     
+      	// 값을 추가할 영역 div를 가져온다.      	
+      	var chat = document.getElementById('chat')
+		
+		// div 생성		
+  		var msg = document.createElement('div')
+  		
+  		
+  		// 내가 입장하면 
+  		if(data.myId === myId){
+  			var node = document.createTextNode(data.myId + data.myRole + "님이 들어왔습니다.")
+  	  		msg.classList.add('me'); 	// 클래스명
+  	  		msg.appendChild(node);
+  			chat.appendChild(msg);
+  		
+  		// 상대가 들어왔을때
+  		} else if(!(data.myId === myId)) {
+  			var node = document.createTextNode(data.myId + data.myRole + "님이 들어왔습니다.")
+  	  		msg.classList.add('other'); 	// 클래스명
+  	  		msg.appendChild(node);
+  			chat.appendChild(msg);
+  		}
+	});
+    
+	
+   	/* 서브밋 이벤트 메시지 표시, 전송 */
+    //$('form').submit(function() {
+    $("#send").click(function() {
+		
+      // 입력되어있는 데이터 가져오기
+ 	  var message = document.getElementById('my_msg').value;
+ 	  // 가져왔으니 데이터 빈칸으로 변경
+ 	  document.getElementById('my_msg').value = "";
+
+	  
+      // 서버로 메세지 전송
+      socket.emit('chat message', {myRole: myRole, myId: myId, message : message});
+			             // 명령어, 내역할, 내id, 전송할 메세지	
+		
+      return false; // 서브밋 확산 종료
+	  });		             
+			    
+	  // 서버에서 메시지 받기	
+	  socket.on('chat message', function(data){
+		 
+		// 값을 추가할 영역 div를 가져온다.      	
+      	var chat = document.getElementById('chat')
+		// div 생성		
+  		var msg = document.createElement('div')
+  		
+  		// 내가 보낸 메세지를 받았다면
+  		if(data.myId === myId){
+			var node = document.createTextNode( "ME" + " : " + data.message);
+  	  		msg.classList.add('me'); 	// 태그에 클래스를 넣어준다
+  	  		msg.appendChild(node);
+  			chat.appendChild(msg);
+  		// 상대가 보낸 메세지라면	
+  		} else {
+  			var node = document.createTextNode(data.myId + data.myRole +" : " + data.message);
+  	  		msg.classList.add('other'); 	// 태그에 클래스를 넣어준다.
+  	  		msg.appendChild(node);
+  			chat.appendChild(msg);
+  		}
+  		
+      });
+	  
+	  // 방에서 나갈때 
+	  socket.on("leaveRoom", function(data){
+
+		  // 추가할 div
+		  var chat = document.getElementById("chat");
+		  // div 생성 
+		  var msg = document.createElement("div");
+		  
+		  if(!(myId === data.myId)){ // 내 가 보낸게 아니라면
+			  var node = document.createTextNode(data.myId + data.myRole + "나갔습니다.");
+	  	  		msg.classList.add('other'); 	// 테그에 클래스를 넣어준다.
+	  	  		msg.appendChild(node);
+	  			chat.appendChild(msg);
+		  }  
+	  });
+  });
+</script>  
+  
+</head>
+
+<body>
+	<div id="main">
+		<div id="chat">
+			<!-- 채팅 메시지 영역 -->
+		</div>
+		<div>
+			<form action="" onsubmit="return false">
+			 	<input type="text" id="my_msg" placeholder="메세지를 입력해주세요"/>
+			 	<input type="submit" value="전송" id="send"/>
+		 	</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<style type="text/css">
+
+* {margin:0; padding:0; text-align: center; }
+body{font-size: 14px; color: #000;}
+a{text-decoration: none; color: #fff; outline:0;}
+ol,ul{list-style: none; margin-left: 0.4%;}
+img,input{vertical-align: middle;}
+
+/*layout*/
+header{width:100%;height: 60px; background:#000;}
+
+header>h1{float:left; font-size: 30px; font-weight: bold; color:#fff;
+   text-align: left; margin-top: 0.3%;}
+#logo>img{float:left; width:100px; height:50px; padding-left:5px;}
+table{ 
+width:80%;
+margin:auto;
+text-align: center;}
+h3{
+	padding:0 20px;
+}
+
+h1{margin-bottom: 20px;}
+
+hr{ 
+	border:none;
+	border-bottom: 2px solid #000;
+  	border-radius: 2px; 
+  	margin: 0 20px;
+ 
+  }
+  #body{
+  height: 330px;}
+  button{
+  	background: none;
+  	border: 1px solid #000;
+  	margin-left: 30px;
+  	padding:3px;
+  }
+     footer{
+	width: 100%;
+	height: 80px;
+	background-color: #000;
+	color: #f2f2f2;
+	text-align: center;
+	padding-top: 10px;
+}
+
+</style>
+<script>
+	
+var myRole = "<%=myRole %>";
+
+
+function chatPopup(url){
+	window.open(url, "", "width=600px, height=800px");
+ }
+
+</script>
+
+</head>
+<body>
+<header>
+   <div id="logo"><img src="logo_white.png" onclick = "location.href='join.do?command=menteeMain'"/></div>
+   <h1 onclick = "location.href='join.do?command=menteeMain'">운토티</h1>
+   
+  
+</header><br>
+<div id="body">
+<h1> 대화방 입장 대기</h1>
+	<table>
+	<% 
+		if(myRole === "mentor"){ 
+			
+			let otherId_arr = otherId.split(",");
+			let	matchNo_arr = matchNo.split(",");
+		
+			for(var i in otherId_arr){
+	%>		
+		<tr>
+			<td>
+				 No.<%=matchNo_arr[i] %>: <%=otherId_arr[i] %>님과 대화하기
+				<button onclick="chatPopup('http://192.168.110.232:8010/chat?matchNo=<%=matchNo_arr[i]%>&myRole=<%=myRole %>')">입장</button>
+			</td>
+		<tr>
+		<tr><td><hr><br><br></td>
+	<% 
+			}
+		} else if(myRole === "mentee"){
+	%>
+		<tr>
+			<td>
+				No.<%=matchNo %>: <%=otherId %> 대화상대에게 입장 
+				<button onclick="chatPopup('http://192.168.110.232:8010/chat?matchNo=<%=matchNo%>&myRole=<%=myRole %>')">입장</button>
+			</td>
+		</tr>
+	<%		
+		}
+	%>
+	</table>
+	</div>
+	 <footer>@ 2020 all copyrights reserved by 운토티</footer>
+</body>
+</html>
