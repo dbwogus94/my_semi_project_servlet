@@ -1,0 +1,340 @@
+/*common*/
+* {margin:0; padding:0;}
+body{font-size: 14px; color: #000;}
+a{text-decoration: none; color: #000; outline:0;}
+ol,ul{list-style: none;}
+img,input{vertical-align: middle;}
+img{max-width: 100%; border:0;}
+/*layout*/
+header{width:100%;height: 50px;}
+
+header>h1{float:left; font-size: 30px; font-weight: bold; color:#000;
+   text-align: left; margin-top: 0;}
+#logo>img{float:left; width:100px; height:50px; padding-left:5px;}
+hr{
+	width: 96%;
+	margin-left:2%;
+	border: 2px solid #000;
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  padding:7px 20px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #000;
+  margin: 6px 0px;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*-------------------------------------------모바일*/
+@media screen and (max-width:767px) {
+	#nav{
+ width:100%; 
+ height: 800px;
+ background: rgba(255,255,255,.9);
+ position: absolute;
+ top:60px;
+ right:0;
+ z-index: 999;
+ display: none;
+ } 
+#nav ul{
+	display:block;
+	width:100%;
+	}
+#nav ul li {
+	float: left;
+	width:60%;
+	height:44px;
+	margin:5% 20%;
+	font-size: 20px;
+	text-align: center;
+	border-bottom: 2px solid #000;
+	}
+#nav ul li:hover{
+	border-bottom: 2px solid #ff7e67;
+} 
+#nav ul li a{color: #000;}
+#container{
+	width:60%;
+	height:1000px;
+	padding: 3% 20%; 
+}
+#move{
+	width: 100%;
+	height: 800px;
+	padding: 20px;
+	position:relative;
+	left:20px;
+	animation-name:example;
+	animation-duration:2.5s;
+	display:none;
+}
+
+@keyframes example{
+	0% {opacity:0; left:-200px; top:0px;}
+  100% {opacity:1; left:20px; top:0px;}
+}
+#container #vid #URL{
+	width:90%;
+	height: 400px;
+}
+nav{
+	float: left;
+	width: 20%;
+	height: 1000px;
+	background: #f0f0f0;
+	font-size: 18px;
+	padding: 3% 0;
+}
+nav ul{
+	margin: 20px 0;
+}
+
+ nav>ul>li{
+  width: 80%;
+	margin: 10%;
+	font-weight: bold;
+}
+
+nav ul .on ul li a{
+	background-color: #fff;
+	border-bottom: 2px solid #000;
+}
+nav ul .on ul li{
+	width:250px;
+	margin-left: 10px;
+	font-size: 15px;
+	padding:8px 3px;
+}
+
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+	color: #f2f2f2;
+	text-align: center;
+	padding-top: 10px;
+}
+
+}
+
+/*-------------------------------------------태블릿*/
+@media screen and (min-width:768px) and (max-width:1049px) {
+	#nav{
+ width:100%; 
+ height: 200px;
+ background: rgba(255,255,255,.9);
+ position: absolute;
+ top:60px;
+ right:0;
+ z-index: 999;
+ display: none;
+ } 
+#nav ul{
+	display:block;
+	width:100%;
+	}
+#nav ul li {
+	float: left;
+	width:19%;
+	height:44px;
+	margin:3% 3%;
+	font-size: 18px;
+	text-align: center;
+	border-bottom: 2px solid #000;
+	}
+#nav ul li:hover{
+	border-bottom: 2px solid #ff7e67;
+} 
+#nav ul li a{color: #000;}
+#container{
+	width:60%;
+	height:1000px;
+	padding: 3% 20%; 
+}
+#move{
+	width: 100%;
+	height: 800px;
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding: 20px;
+	position:relative;
+	left:20px;
+	animation-name:example;
+	animation-duration:2.5s;
+	display:none;
+}
+
+@keyframes example{
+	0% {opacity:0; left:-200px; top:0px;}
+  100% {opacity:1; left:20px; top:0px;}
+}
+#container #vid #URL{
+	width:90%;
+	height: 400px;
+}	
+	nav{
+	float: left;
+	width: 20%;
+	height: 1000px;
+	background: #f0f0f0;
+	font-size: 18px;
+	padding: 3% 0;
+}
+nav ul{
+	margin: 20px 0;
+}
+
+ nav>ul>li{
+  width: 80%;
+	margin: 10%;
+	font-weight: bold;
+	}
+
+nav ul .on ul li a:hover{
+	background-color: #000;
+	border-bottom: 2px solid #fff;
+	color:#fff;
+}
+nav ul .on ul li{
+	width:100%;
+	font-size: 15px;
+	padding:8px 3px;
+}
+
+
+
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+	color: #f2f2f2;
+	text-align: center;
+	padding-top: 10px;
+}
+
+}
+
+/*-------------------------------------------pc*/
+@media screen and (min-width:1050px){
+	#nav{
+ width:100%; 
+ height: 300px;
+ background: rgba(255,255,255,.9);
+ position: absolute;
+ top:60px;
+ right:0;
+ z-index: 999;
+ display: none;
+ } 
+#nav ul{
+	display:block;
+	width:100%;
+	}
+#nav ul li {
+	float: left;
+	width:15%;
+	height:44px;
+	margin:2% 5%;
+	font-size: 20px;
+	text-align: center;
+	border-bottom: 2px solid #000;
+	}
+#nav ul li:hover{
+	border-bottom: 2px solid #ff7e67;
+} 
+#nav ul li a{color: #000;}
+	
+nav{
+	float: left;
+	padding:3% 0;
+	width: 13%;
+	height: 800px;
+	background: #f0f0f0;
+	font-size: 18px;
+}
+
+
+h5{
+	font-size: 13px;
+	padding: 20px;
+	line-height: 30px;
+}
+
+h6{
+	font-size: 13px;
+	padding:20px;
+	line-height: 30px;
+		
+}
+
+ nav>ul>li{
+  width: 80%;
+	margin:10%;
+	font-weight: bold;
+	}
+
+nav ul .on ul li a:hover{
+	background-color: #fff;
+	border-bottom: 2px solid #000;
+	color:#000;
+}
+nav ul .on ul li{
+	width:100%;
+	margin-left: 10px;
+	font-size: 15px;
+	padding:8px 3px;;
+}
+
+#container{
+	width:60%;
+	height:800px;
+	padding: 5% 20%; 
+}
+#move{
+	width: 100%;
+	height: 800px;
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding: 20px;
+	padding-left: 60px;
+	position:relative;
+	animation-name:example;
+	animation-duration:2.5s;
+	display:none;
+}
+
+@keyframes example{
+	0% {opacity:0; left:-200px; top:0px;}
+  100% {opacity:1; left:0px; top:0px;}
+}
+
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #000;
+	color: #f2f2f2;
+	text-align: center;
+	padding-top: 10px;
+}
+
+}

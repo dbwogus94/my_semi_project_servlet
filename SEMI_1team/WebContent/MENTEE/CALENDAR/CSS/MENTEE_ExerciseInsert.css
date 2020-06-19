@@ -1,0 +1,110 @@
+.container p {
+	text-align: center;
+}
+
+#date {
+	width: 100%;
+	text-align: center;
+}
+
+.selectTime {
+	display: inline-block;
+	width: 50%;
+	margin: 4% 0% 4% 0%;
+}
+
+.container>.dropdown {
+	width: 30%;
+	vertical-align: top;
+	float: left;
+	display: inline-block;
+	margin-left: 2%;
+}
+
+.dropdown-select {
+	padding: 6px 8px 6px 10px;
+	font-size: 13px;
+	border: none;
+	border-bottom: 1px solid black;
+	margin: 2% 1% 0% 1%;
+	background-color: white;
+}
+
+.dropdown-select:focus {
+	z-index: 3;
+	color: #394349;
+	outline: 2px solid #49aff2;
+	outline: 2px solid -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.dropdown-select>option {
+	margin: 3px;
+	padding: 6px 8px;
+	text-shadow: none;
+	background: #f2f2f2;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+/*-- plan영역 --*/
+.plan-container {
+	display: inline-block;
+	margin: 1%;
+	text-align: center;
+}
+
+.plan-box {
+	width: 220px;
+	border: 1px solid gray;
+	float: left;
+}
+
+p {
+	margin: auto;
+}
+
+#noPlan {
+	text-align: center;
+	font-size: 20px;
+	margin: 10%;
+}
+
+.category {
+	border-bottom: 1px solid black;
+	color: white;
+	background-color: black;
+	height: 30px;
+	text-align: center;
+}
+
+.exercise-name {
+	border-bottom: 1px solid black;
+}
+
+.count {
+	border-bottom: 1px solid black;
+}
+
+/*-- 시간영역 --*/
+#time {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 5%;
+}
+
+/*-- 버튼 --*/
+#insertBtn {
+	width: 80%;
+	font-weight: 600;
+	height: 2.3em;
+	border: 1px solid black;
+	background: white;
+	margin: 5% 9% 0%;
+}
+
+#insertBtn:hover {
+	border: 1px solid #ff7e67;
+}

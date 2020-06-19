@@ -1,0 +1,698 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/*common*/
+* {margin:0; padding:0;}
+body{font-size: 14px; color: #000;}
+a{text-decoration: none; color: #000; outline:0;}
+img,input{vertical-align: middle;}
+img{max-width: 100%; border:0; float: left;}
+/*layout*/
+header{width:100%;height: 50px;
+    margin-top: 1%; background-color: black;}
+
+header>h1{float:left; font-size: 30px; font-weight: bold; color:white;
+   text-align: left; margin-top: 0.7%;}
+#logo>img{float:left; width:100px; height:50px; padding-left:5px;}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  padding:7px 1.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+ 
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.board{
+    width:80%;
+    background: #f0f0f0;
+    margin:5% 10%;
+    height: 720px;
+}
+
+h3{
+   padding:0 20px;
+}
+
+
+
+hr{ 
+   border: 1px solid #ddd;
+     border-radius: 2px; 
+     margin: 0 20px;
+ 
+  }
+
+#mentee_pro{
+   width:80%;
+   height:250px;
+   margin-left: 10%;
+   margin-top:3%;
+   background: #f0f0f0;
+}
+#img_pro{
+   width: 200px;
+   height: 250px;
+   float: left; 
+   padding: 10px 20px;
+}
+
+#mentee_pro img{
+   width: 200px;
+   height: 200px;
+   display: block;
+   margin-bottom: 10px;
+}
+
+.edit_profile{
+   display: block;
+   position: relative;
+   background: none;
+   border: none;
+   border-bottom: 2px solid #000;
+   margin-left: 53px;
+}
+
+#li_pro{
+   width:80%;
+   padding: 2.5%;
+   margin-left: 250px;
+   position: relative;
+   
+}
+
+#li_pro ul li {
+   margin-bottom: 20px;
+}
+
+h1 > a{
+   margin: 60px;
+}
+
+i{
+   font-size: 18px;
+   color: black;
+}
+
+td > a{
+   color: #7c8a95;
+}
+
+
+#insertBtns {
+   width: 100%;
+   float: left;
+}
+
+#btn_group input{
+  display: inline-block;
+  border: 0;
+  border-radius: 2em;
+  width: 1em;
+  height: 1em;
+  outline: none;
+  border-bottom: 0.15em solid rgba(0,0,0,0.5);
+}
+
+#btn_group{
+   height: 30px;
+}
+
+#btn_group input:hover {
+   color:white; 
+    background-color: #ff7e67;
+}
+
+#weightBtn {
+   background: #c0c0c0;
+}
+
+#menuBtn {
+   background: #747474;
+}
+
+#planbtn {
+   width:20%;
+}
+
+#planBtn{
+   background: #303030;
+}
+
+#coach{
+   width:20%;
+}
+
+#insert_btn_group input{
+   display: inline-block;
+     border: 0;
+     color: white;
+     font-weight: 600;
+     width: 20%;
+     height: 2.3em;
+     outline: none;
+     border-bottom: 0.15em solid rgba(0,0,0,0.5);
+}
+
+#insert_btn_group input:hover {
+   color:white; 
+    background-color: #ff7e67;    
+}
+
+
+#weightInsertBtn {
+   background: #c0c0c0;
+}
+
+#menuInsertBtn {
+   background: #747474;
+}
+
+#planInsertBtn {
+   background: #303030;
+}
+
+.menteeCal{
+   position: relative;
+    width: 90%;
+    height: 600px;
+    padding: 5% 5%;
+}
+
+#btns{
+   display: inline;
+    margin-left: 31%;
+}
+
+button {
+   background: none;
+   border: 1px solid #000;
+   width: 100px;
+   height: 30px;
+   margin-left: 7%;
+   
+}
+
+button:hover{
+   border: 2px solid #ff7e67;
+}
+
+
+/*****************pc****************/
+
+tr {
+    font-size: 120%;
+}
+
+span.date {
+    font-size: 270%;
+}
+
+caption {
+    margin-bottom: 7%;
+}
+
+b {
+    margin: 0% 10% 0%;
+}
+
+#calenderBoard{
+   width: 45%;
+    float: left;
+}
+
+#calendar {
+    margin: 0 auto;
+}
+
+#calendar td {
+   text-align: center;
+   width: 80px;
+   height: 80px;
+}
+
+#calendar th {
+   font-weight: 600;
+   height: 50px;   
+}
+
+
+
+/*-------------------calendar-----------------*/
+
+#insert_btn_group{
+   width: 100%;
+    padding: 0 20%;
+}
+#mentor div{
+   text-align: center;
+   font-size: 22px;
+   margin-bottom: 10px;
+   }
+#mentor div span{
+   font-weight: bold;
+}   
+   
+#mentorImage {
+    width: 65%;
+    margin: 15% 0% 10% 20%;
+}
+
+/*------------------mentor----------*/
+   
+#mentor {
+   width: 45%;
+   border: none;
+   float: right;
+   box-sizing: border-box;
+   border-radius: 35px;
+   display: inline-block;
+}
+
+footer{
+   width: 100%;
+   height: 100px;
+   background-color: #000;
+   color: #f2f2f2;
+   text-align: center;
+   padding-top: 10px;
+}
+   
+
+
+/****pc***************************************************pc*/
+@media screen and (min-width:1050px){
+#nav{
+ width:100%; 
+ height: 300px;
+ background: rgba(255,255,255,.9);
+ position: absolute;
+ top:60px;
+ right:0;
+ z-index: 999;
+ display: none;
+ } 
+#nav ul{
+   display:block;
+   width:100%;
+   }
+#nav ul li {
+   float: left;
+   width:15%;
+   height:44px;
+   margin:2% 5%;
+   font-size: 20px;
+   text-align: center;
+   border-bottom: 2px solid #000;
+   }
+#nav ul li:hover{
+   border-bottom: 2px solid #ff7e67;
+} 
+#nav ul li a{color: #000;}
+
+   #join_container {
+   text-align: center;
+   width: 100%;
+}
+
+#main_container {
+   text-align: center;
+   width: 80%;
+   height: auto;
+   margin:10%;
+}
+
+
+   
+}
+
+
+/*******************************************mobile*/
+@media screen and (max-width:767px) {
+   #nav{
+ width:100%; 
+ height: 735px;
+ background: rgba(255,255,255,.9);
+ position: absolute;
+ top:60px;
+ right:0;
+ z-index: 999;
+ display: none;
+ } 
+#nav ul{
+   display:block;
+   width:100%;
+   }
+#nav ul li {
+   float: left;
+   width:60%;
+   height:44px;
+   margin:5% 20%;
+   font-size: 20px;
+   text-align: center;
+   border-bottom: 2px solid #000;
+   }
+#nav ul li:hover{
+   border-bottom: 2px solid #ff7e67;
+} 
+#nav ul li a{color: #000;}
+  .board{
+        width:80%;
+        height:1300px;
+        background: #f0f0f0;
+        margin:5% 10%;
+        padding-top: 5%;
+     }
+   
+
+#mentee_pro {
+    width: 80%;
+    height: 800px;
+    margin-left: 10%;
+    margin-top: 3%;
+    background: #f0f0f0;
+}
+
+
+#img_pro {
+    width: 80%;
+    margin-left: 7%;
+    padding-top: 5%;
+    height: auto;
+}
+
+
+#mentee_pro img{
+   width: 90%;
+   height: auto;
+   display: block;
+   margin: 10px 5%;
+}
+
+.edit_profile {
+    display: block;
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    margin-left: 5%;
+}
+
+
+#li_pro {
+    width: 80%;
+    padding: 10%;
+    text-align: center;
+    display: inline-block;
+   margin-left: 0px;
+}
+
+
+#li_pro ul li {
+   margin-bottom: 20px;
+}
+/**/
+caption{font-size: 20px; height: 30px;}
+#calenderBoard{
+   width: 100%;
+    float: left;
+}
+
+#calendar {
+    margin: 0 auto;
+}
+
+#calendar td {
+   text-align: center;
+   width: 80px;
+   height: 80px;
+}
+
+#calendar th {
+   font-weight: 600;
+   height: 50px;   
+}
+
+h1 > a{
+   margin: 30px;
+}
+
+
+/*-------------------calendar-----------------*/
+
+#insert_btn_group{
+   width: 100%;
+    padding: 0 20%;
+}
+#mentor div{
+   text-align: center;
+   font-size: 22px;
+   margin-bottom: 10px;
+   }
+#mentor div span{
+   font-weight: bold;
+}   
+   
+#mentorImage {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+/*------------------mentor----------*/
+   
+   #mentor {
+    width: 100%;
+    border: none;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 35px;
+    margin-top: 10%;
+    }
+    
+#mentor div{
+   width: 80%;
+   margin: 10px 10% 20px 10%;
+}
+
+#mentor div img{
+   width:80%;
+   margin:20px 10%;
+   }
+ #planbtn {
+   width:100%;
+}
+
+#coach{
+   width:100%;
+} 
+
+   footer{
+   width: 100%;
+   height: 50px;
+   background-color: #000;
+   color: #f2f2f2;
+   text-align: center;
+   padding-top: 10px;
+   position: relative;
+   top: 20px;
+}
+
+button {
+    background: none;
+    border: 1px solid #000;
+    width: 88%;
+    height: 30px;
+}
+
+}
+/*태블릿 크기 768~1023*/
+@media screen and (min-width:768px) and (max-width:1023px) {
+#nav{
+ width:100%; 
+ height: 200px;
+ background: rgba(255,255,255,.9);
+ position: absolute;
+ top:60px;
+ right:0;
+ z-index: 999;
+ display: none;
+ } 
+#nav ul{
+   display:block;
+   width:100%;
+   }
+#nav ul li {
+   float: left;
+   width:19%;
+   height:44px;
+   margin:3% 3%;
+   font-size: 18px;
+   text-align: center;
+   border-bottom: 2px solid #000;
+   }
+#nav ul li:hover{
+   border-bottom: 2px solid #ff7e67;
+} 
+#nav ul li a{color: #000;}
+  .board{
+        width:80%;
+        height:1400px;
+        background: #f0f0f0;
+        margin:5% 10%;
+        padding: 5% 0;
+     }
+/**/
+#mentee_pro{
+   width:80%;
+   height:250px;
+   margin-left: 10%;
+   margin-top:3%;
+   background: #f0f0f0;
+}
+#img_pro{
+   width: 200px;
+   height: 250px;
+   float: left; 
+   padding: 10px 20px;
+}
+
+#mentee_pro img{
+   width: 200px;
+   height: 200px;
+   display: block;
+   margin-bottom: 10px;
+}
+
+.edit_profile{
+   display: block;
+   position: relative;
+   background: none;
+   border: none;
+   border-bottom: 2px solid #000;
+   margin-left: 53px;
+}
+
+#li_pro{
+   width:60%;
+   padding: 2.5%;
+   margin-left: 250px;
+   position: relative;
+   
+}
+
+#li_pro ul li {
+   margin-bottom: 20px;
+}
+
+/**/
+caption{font-size: 20px; height: 30px;}
+#calenderBoard{
+   width: 100%;
+    float: left;
+}
+
+#calendar {
+    margin: 0 auto;
+}
+
+#calendar td {
+   text-align: center;
+   width: 80px;
+   height: 80px;
+}
+
+#calendar th {
+   font-weight: 600;
+   height: 50px;   
+}
+
+h1 > a{
+   margin: 60px;
+}
+
+
+/*-------------------calendar-----------------*/
+
+#insert_btn_group{
+   width: 100%;
+    padding: 0 20%;
+}
+#mentor div{
+   text-align: center;
+   font-size: 22px;
+   margin-bottom: 10px;
+   }
+#mentor div span{
+   font-weight: bold;
+}   
+   
+#mentorImage {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+/*------------------mentor----------*/
+   
+   #mentor {
+    width: 100%;
+    border: none;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 35px;
+    margin-top: 10%;
+    }
+    
+  #mentor div{
+   width: 80%;
+   margin: 10px 10% 20px 10%;
+}
+
+#mentor div img{
+   width:80%;
+   margin:20px 10%;
+   }
+  
+   #planbtn {
+   width:100%;
+}
+
+#coach{
+   width:100%;
+} 
+  
+    footer{
+   width: 100%;
+   height: 80px;
+   background-color: #000;
+   color: #f2f2f2;
+   text-align: center;
+   padding-top: 10px;
+}
+}
+

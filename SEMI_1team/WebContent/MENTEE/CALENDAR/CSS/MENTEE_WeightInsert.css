@@ -1,0 +1,103 @@
+.container {
+   padding: 10px;
+   margin: 5% 0% 0% 0%;
+   width: 92%;
+}
+
+.container p {
+   text-align: center;
+}
+
+.container > .dropdown {
+    width: 30%;
+    vertical-align: top;
+    float: left;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888888 transparent;
+  pointer-events: none;
+}
+
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+    padding: 6px 8px 6px 10px;
+    width: 85%;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10% 5% 0% 5%;
+    background-color: white;
+}
+
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*-----------------------selectDate-------------------*/
+
+#inputWeight {
+    display: inline-block;
+    width: 70%;
+    margin: 15% 0% 10% 12%;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+
+#btn_group {
+   display: inline-block;
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+}
+
+#updateBtn {
+    width: 80%;
+    font-weight: 600;
+    height: 2.3em;
+    border: 1px solid black;
+    background: white;
+    margin: 5% 9% 0%;
+}
+#updateBtn:hover {
+   border: 1px solid #ff7e67;
+}

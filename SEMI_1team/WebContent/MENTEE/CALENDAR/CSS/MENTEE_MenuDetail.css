@@ -1,0 +1,41 @@
+.tagDiv {
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 3% 0% 0% 10%;
+    padding: 0% 0% 2% 0%;
+}
+
+.container {
+    text-align: center;
+    margin: 8% 0% 0% 0%;
+}
+
+span.tag {
+    margin-bottom: 1%;
+    display: inline-block;
+}
+
+p#title {
+    font-size: 23px;
+}
+
+p.time {
+    margin: 5% 70% 2% 0%;
+}
+
+.btn {
+    border: 1px solid black;
+    background-color: white;
+    width: 30%;
+    height: 30px;
+    font-weight: 600;
+    margin: 13% 7% 0% 4%;
+}
+
+#delBtn:hover{
+	border: 1px solid #ff7e67;
+}
+
+#closeBtn:hover {
+	border: 1px solid #ff7e67;
+}

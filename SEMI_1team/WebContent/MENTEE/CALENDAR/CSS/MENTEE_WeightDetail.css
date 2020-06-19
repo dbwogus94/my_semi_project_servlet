@@ -1,0 +1,40 @@
+.container {
+    margin: 15% 0% 0% 0%;
+    text-align: center;
+}
+
+p.title {
+    font-size: 20px;
+}
+
+p#kg {
+    display: inline-block;
+    font-size: 20px;
+}
+input#deleteWeight {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 23px;
+    height: 35px;
+    margin: 12% 0% 20% 0%;
+}
+
+.btn {
+    font-weight: 600;
+    height: 2.3em;
+    border: 1px solid black;
+    background: white;
+    margin: 1%;
+    width: 35%;
+}
+
+#delBtn:hover{
+	border: 1px solid #ff7e67;
+}
+
+#closeBtn:hover {
+	border: 1px solid #ff7e67;
+}
+

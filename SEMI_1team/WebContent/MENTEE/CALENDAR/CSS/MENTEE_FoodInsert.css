@@ -1,0 +1,34 @@
+div#container {
+    text-align: center;
+    margin-top: 5%;
+}
+
+span#food {
+    font-size: 22px;
+}
+
+input.inputTxt {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 2%;
+    font-size: 18px;
+    text-align: center;
+    padding: 1%;
+}
+
+input.bnt {
+    margin: 3% 0.8% 1%;
+    border: 1px solid black;
+    background-color: white;
+    width: 7%;
+    height: 30px;
+    font-weight: 600;
+}
+
+#ok:hover{
+   border: 1px solid #ff7e67;
+}
+
+#cancle:hover{
+   border: 1px solid #ff7e67;
+}

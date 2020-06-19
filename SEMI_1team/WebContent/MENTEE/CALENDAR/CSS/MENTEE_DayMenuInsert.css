@@ -1,0 +1,245 @@
+body{
+     width: 50%;
+}
+#date{
+   margin: 4% 5px 15px;
+}
+.container {
+    margin: 10% 45%;
+    width: 90%;
+}
+.img_searchIcon{
+   background: url(../ICON/search.png) round;
+   border: none;
+   width: 30px;
+   height: 30px;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+}
+.selectTime {
+    margin-top: 2%;
+    margin-left: 40%;
+}
+#searchInput{
+   width: 280px;
+    height: 35px;
+    border:none;
+    border-bottom:1px solid #000;
+    border-radius: 0px;
+}
+#food{
+   height: 45px;
+   width: 150px;
+}
+#foodSearch{
+   background-color: orange;
+   width: 350px;
+   height: 300px;
+}
+select{
+   width: 75px;
+    height: 20px;
+    border:none;
+    border-bottom: 1px solid #000;
+    border-radius: 0px;
+    background-color: white;
+}
+
+#mentorImg{
+   width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mentorImage{
+   width: 250px;
+    height: 250px;
+}
+
+.dropdown{
+     margin: 3% 0% 5% 40%;
+     float: left;
+
+}
+
+li.tags {
+    margin: 5px 10px;
+}
+
+.bnt {
+    margin: 10% 5px 5px 1%;
+    border: none;
+    border: 1px solid black;
+    font-size: 14px;
+    background: white;
+    color: black;
+    width: 130px;
+    height: 30px;
+    font-weight: 600;
+}
+
+div#noFood {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-left: 12%;
+}
+
+div#meal > .meal {
+    border: none;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    margin: 3% 5% 5% 41%;
+    width: 40%;
+    height: auto;
+}
+
+div#spanbreakfast {
+    margin: 7% 90% 0% 0%;
+    padding-left: %;
+    padding-left: 36%;
+    display: inline;
+}
+div#spanlunch {
+    display: inline;
+    padding-left: 36%;
+}
+div#spandinner {
+    display: inline;
+    padding-left: 36%;
+}
+div#spansnack {
+    display: inline;
+    padding-left: 36%;
+}
+
+span.spanMeal {
+    margin: 5%;
+}
+
+div#bnt {
+    margin-left: 43%;
+}
+
+div#gram {
+    width: 20%;
+    text-align: center;
+    height: 300px;
+    margin: 0% 0% 0% 39%;
+    display: none;
+    position: absolute;
+    top: 23%;
+}
+
+span#inputGram {
+    display: block;
+    margin: 10% 0% 0% 0%;
+    font-size: 24px;
+}
+
+input#insertGram {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 17% 2% 5% 5%;
+    font-size: 24px;
+    width: 60%;
+    text-align: center;
+}
+
+#gramBnt {
+    border: 1px solid black;
+    font-size: 14px;
+    background: white;
+    color: black;
+    margin: 10% 0% 0% 18%;
+    float: left;
+    width: 95px;
+    height: 30px;
+}
+
+input#cancle {
+    border: 1px solid black;
+    font-size: 14px;
+    background: white;
+    color: black;
+    width: 95px;
+    height: 30px;
+    margin-top: 10%;
+}
+
+@import "compass/css3";
+
+p{color:#ddd}
+/*==========================================================================*/
+.tagarea{display: none;}
+.tag-box{
+  list-style:none;
+  padding:3px;
+  margin:0;
+  display:none;
+  font-family:arial;
+  width:100%;
+}
+
+#gramBnt:hover{
+   border: 1px solid #ff7e47;
+}
+
+#cancle:hover{
+   border: 1px solid #ff7e47;
+}
+
+#apply:hover{
+   border: 1px solid #ff7e47;
+}
+
+#ok:hover{
+   border: 1px solid #ff7e47;
+}
+
+/*
+.tag-box > li :hover .close{
+   visibility: visible;
+}
+
+*/
+li.tags.ui-sortable-handle {
+    display: none;
+}
+
+ul.tag-box.ui-sortable {
+    display: none;
+}
+
+ul > .tags:hover .close {
+   display: inline-block;
+}
+
+.close{
+     right: 4px;
+     bottom: 3px;
+     display: none
+}
+
+#x{
+   border: none;
+   background-color: white;
+}
+
+.input-tag{
+  color:#fff;
+  height:24px;
+  vertical-align:middle;
+  border:none;
+  outline:none;
+  background:none;
+  &:hover, &:focus{
+    outline:none;
+    border:none;
+  }
+}
+
+=
+   
